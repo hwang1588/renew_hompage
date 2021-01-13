@@ -5,8 +5,9 @@
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
  * For details, see https://creativecommons.org/licenses/by/3.0/.
  */
+/*패딩1.0rem 추가*/
 .bd-navbar {
-    padding: .75rem 0;
+    padding: 1.75rem 0;
 }
 
 .bd-navbar .navbar-toggler {
