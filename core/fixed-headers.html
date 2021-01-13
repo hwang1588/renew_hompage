@@ -13,20 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="css_js/docs.css" />
 	<link rel="stylesheet" type="text/css" href="css_js/fullpage.css" />
 	<link rel="stylesheet" type="text/css" href="css_js/examples.css" />
-	<!-- 2번째화면 텍스트페이드효과:S -->
-	<style>
-		#section2 img{
-			left: 130%;
-			position:relative;
-      transition: all 600ms ease;
-		}
-		#section2 p{
-			opacity: 0;
-      transition: all 600ms ease;
-		}
-	</style>
-    <!-- 2번째화면 텍스트페이드효과:E -->
-
 
 	<style>
 
@@ -80,7 +66,15 @@
 		color: #fff;
 		z-index: 999;
 	}
-
+		#section2 img{
+			left: 130%;
+			position:relative;
+      transition: all 600ms ease;
+		}
+		#section2 p{
+			opacity: 0;
+      transition: all 600ms ease;
+		}
 	</style>
 
 	<!--[if IE]>
@@ -220,13 +214,6 @@
 <!--=============-->
 
 <div id="fullpage">
-	<div class="section" id="section0">
-		<div class="intro">
-			<h1>Fixed elements</h1>
-			<p>Create your own headers and footers</p>
-		</div>
-	</div>
-
 	<div class="section" id="section1">
 	    <div class="slide" id="slide1">
 			<div class="intro">
@@ -242,9 +229,7 @@
 			<h1>Slide 2</h1>
 			<img src="imgs/iphone-blue.png" alt="iphone" id="iphone-two" />
 		</div>
-
 	</div>
-
 	<div class="section" id="section2">
 		<div class="intro">
 			<img src="imgs/1.png" alt="Cool" />
@@ -256,6 +241,7 @@
 	<div class="section" id="section3">
 		<div class="intro">
 			<h1>Enjoy it</h1>
+			<p>Choose the best easing effect for your site!</p>
 		</div>
 	</div>
 </div>
@@ -271,23 +257,7 @@
 //        navigationTooltips: ['1번', '2번', '3번', '4번'],
         showActiveTooltip: true,
         css3: true,
-        menu: '#menu',
-        afterLoad: function(origin, destination, direction){
-            //section 2
-            if(destination.index == 1){
-                document.querySelector('#section2').querySelector('img').style.left = 0 + 'px';
-                document.querySelector('#section2').querySelector('p').style.opacity = 1;
-            }
-
-            //back to original state
-            else if(origin && origin.index == 1){
-                document.querySelector('#section2').querySelector('img').style.left = 130 + '%';
-                document.querySelector('#section2').querySelector('p').style.opacity = 0;
-            }
-
-            //section 3 is using the state classes to fire the animation
-            //see the CSS code above!
-        }
+        menu: '#menu'
     });
 </script>
 
