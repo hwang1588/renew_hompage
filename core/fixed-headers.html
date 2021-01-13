@@ -268,10 +268,26 @@
         sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C','#888888'],
         anchors: ['firstPage', 'secondPage', '3rdPage','4thapge'],
         navigation:true,
-//        navigationTooltips: ['1번', '2번', '3번'],
+//        navigationTooltips: ['1번', '2번', '3번', '4번'],
         showActiveTooltip: true,
         css3: true,
-        menu: '#menu'
+        menu: '#menu',
+        afterLoad: function(origin, destination, direction){
+            //section 2
+            if(destination.index == 1){
+                document.querySelector('#section2').querySelector('img').style.left = 0 + 'px';
+                document.querySelector('#section2').querySelector('p').style.opacity = 1;
+            }
+
+            //back to original state
+            else if(origin && origin.index == 1){
+                document.querySelector('#section2').querySelector('img').style.left = 130 + '%';
+                document.querySelector('#section2').querySelector('p').style.opacity = 0;
+            }
+
+            //section 3 is using the state classes to fire the animation
+            //see the CSS code above!
+        }
     });
 </script>
 
