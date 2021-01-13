@@ -9,7 +9,6 @@
 	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css" />
 	<meta name="Resource-type" content="Document" />
 
-
 	<link rel="stylesheet" type="text/css" href="css_js/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css_js/docs.css" />
 	<link rel="stylesheet" type="text/css" href="css_js/fullpage.css" />
@@ -229,11 +228,15 @@
 		</div>
 
 	</div>
+
 	<div class="section" id="section2">
 		<div class="intro">
-			<h1>Enjoy it</h1>
+			<img src="imgs/1.png" alt="Cool" />
+			<h1>From the callbacks</h1>
+			<p>Animation fired through fullPage.js callbacks, making use of css3 transitions.</p>
 		</div>
 	</div>
+
 	<div class="section" id="section3">
 		<div class="intro">
 			<h1>Enjoy it</h1>
@@ -246,14 +249,13 @@
 
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        anchors: ['firstPage', 'secondPage', '3rdPage','4thapge'],
         sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C','#888888'],
         anchors: ['firstPage', 'secondPage', '3rdPage','4thapge'],
         navigation:true,
 //        navigationTooltips: ['1번', '2번', '3번'],
         showActiveTooltip: true,
-        menu: '#menu',
-        css3: true
+        css3: true,
+        menu: '#menu'
     });
 </script>
 
