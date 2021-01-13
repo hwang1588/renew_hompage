@@ -2218,4 +2218,4 @@
     color: inherit
 }
 
-@media (min-width: 1000px) .navbar-expand-md .navbar-collapse {display: flex !important;}
+.nav-link{font-size: 18px;}
