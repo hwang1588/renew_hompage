@@ -1,0 +1,104 @@
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #FFFFFF;
+		margin:0;
+		padding:0;
+	}
+
+	#section2 h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #000000;
+		margin:0;
+		padding:0;
+	}
+
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Fixed header and footer.
+	* ---------------------------------------부트스트랩으로 내부값 변경됨 */
+	#header, #footer{
+		position:fixed;
+/*		height: 50px;*/
+		display:block;
+		width: 100%;
+/*		background: #333;*/
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+/*		padding: 50px 0 0 0;*/
+	}
+
+	#header{
+		top:0px;
+	}
+	#footer{
+		bottom:0px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu {
+		bottom: 80px;
+	}
+	#infoMenu li a {
+		color: #fff;
+		z-index: 999;
+	}
+		#section2 img{
+			left: 130%;
+			position:relative;
+      transition: all 800ms ease;
+		}
+		#section2 p{
+			opacity: 0;
+      transition: all 800ms ease;
+		}
+
+        /* 움직이는 텍스트 만드는 스타일:S */
+        #section2 img{
+			left: 130%;
+			position:relative;
+      transition: all 800ms ease;
+		}
+		#section2 p{
+			opacity: 0;
+      transition: all 800ms ease;
+		}
+        #section2 h1{
+			opacity: 0;
+      transition: all 800ms ease;
+		}
+		#section3 .intro{
+			left: -130%;
+			position:relative;
+      transition: all 800ms ease;
+		}
+
+    #section3 .intro{
+      left: -130%;
+      position:relative;
+      transition: all 800ms ease;
+    }
+    /* 움직이는 텍스트 만드는 스타일:E */
+
+    /**
+    * Here we fire the animation for section 3.
+    * As the fp-viewing class in the body changes on each section and slide.
+    */
+    body.fp-viewing-3rdPage #section3 .intro{
+       left: 0%;
+    }

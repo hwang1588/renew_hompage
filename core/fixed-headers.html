@@ -13,100 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css_js/docs.css" />
 	<link rel="stylesheet" type="text/css" href="css_js/fullpage.css" />
 	<link rel="stylesheet" type="text/css" href="css_js/examples.css" />
-
-	<style>
-
-	/* Style for our header texts
-	* --------------------------------------- */
-	h1{
-		font-size: 5em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-		padding:0;
-	}
-	.intro p{
-		color: #fff;
-	}
-
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-	}
-
-	/* Fixed header and footer.
-	* ---------------------------------------부트스트랩으로 내부값 변경됨 */
-	#header, #footer{
-		position:fixed;
-/*		height: 50px;*/
-		display:block;
-		width: 100%;
-/*		background: #333;*/
-		z-index:9;
-		text-align:center;
-		color: #f2f2f2;
-/*		padding: 50px 0 0 0;*/
-	}
-
-	#header{
-		top:0px;
-	}
-	#footer{
-		bottom:0px;
-	}
-
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu {
-		bottom: 80px;
-	}
-	#infoMenu li a {
-		color: #fff;
-		z-index: 999;
-	}
-		#section2 img{
-			left: 130%;
-			position:relative;
-      transition: all 600ms ease;
-		}
-		#section2 p{
-			opacity: 0;
-      transition: all 600ms ease;
-		}
-
-        /* 움직이는 텍스트 만드는 스타일:S */
-        #section2 img{
-			left: 130%;
-			position:relative;
-      transition: all 600ms ease;
-		}
-		#section2 p{
-			opacity: 0;
-      transition: all 600ms ease;
-		}
-		#section3 .intro{
-			left: -130%;
-			position:relative;
-      transition: all 600ms ease;
-		}
-
-    #section3 .intro{
-      left: -130%;
-      position:relative;
-      transition: all 600ms ease;
-    }
-    /* 움직이는 텍스트 만드는 스타일:E */
-
-    /**
-    * Here we fire the animation for section 3.
-    * As the fp-viewing class in the body changes on each section and slide.
-    */
-    body.fp-viewing-3rdPage #section3 .intro{
-       left: 0%;
-    }
-	</style>
+	<link rel="stylesheet" type="text/css" href="css_js/js.css" />
 
 	<!--[if IE]>
 		<script type="text/javascript">
@@ -265,7 +172,7 @@
 	<div class="section" id="section2">
 		<div class="intro">
 			<img src="imgs/1.png" alt="Cool" />
-			<h1>From the callbacks</h1>
+			<h1>일상이 행복 우리아파트 우리 행복카</h1>
 			<p>Animation fired through fullPage.js callbacks, making use of css3 transitions.</p>
 		</div>
 	</div>
@@ -283,33 +190,24 @@
 
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C','#888888',''],
+        sectionsColor: ['#C63D0F', '#FFD41D', '#7E8F7C','#888888',''],
         anchors: ['firstPage', 'secondPage', '3rdPage','4thapge','lastpage'],
         navigation:true,
 //        navigationTooltips: ['1번', '2번', '3번', '4번'],
         showActiveTooltip: true,
         css3: true,
-        menu: '#menu'
-    });
-</script>
-
-<!-- 텍스트용 스크립트:S -->
-<script type="text/javascript">
-    var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
         menu: '#menu',
         afterLoad: function(origin, destination, direction){
             //section 2
             if(destination.index == 1){
-                document.querySelector('#section2').querySelector('img').style.left = 0 + 'px';
-                document.querySelector('#section2').querySelector('p').style.opacity = 1;
+//                document.querySelector('#section2').querySelector('img').style.left = 0 + 'px';
+                document.querySelector('#section2').querySelector('h1').style.opacity = 1;
             }
 
             //back to original state
             else if(origin && origin.index == 1){
-                document.querySelector('#section2').querySelector('img').style.left = 130 + '%';
-                document.querySelector('#section2').querySelector('p').style.opacity = 0;
+//                document.querySelector('#section2').querySelector('img').style.left = 130 + '%';
+                document.querySelector('#section2').querySelector('h1').style.opacity = 0;
             }
 
             //section 3 is using the state classes to fire the animation
@@ -317,7 +215,6 @@
         }
     });
 </script>
-<!-- 텍스트용 스크립트:E -->
 
 </body>
 </html>
