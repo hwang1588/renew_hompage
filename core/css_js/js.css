@@ -1,6 +1,7 @@
 
-	/* Style for our header texts
-	* --------------------------------------- */
+	/*=========================*/
+    /* 각 섹션별 텍스트 꾸밈:S */
+	/*=========================*/
 	h1{
 		font-size: 5em;
 		font-family: arial,helvetica;
@@ -20,85 +21,94 @@
 	.intro p{
 		color: #fff;
 	}
+	/*=========================*/
+    /* 각 섹션별 텍스트 꾸밈:E */
+	/*=========================*/
 
-	/* Centered texts in each section
-	* --------------------------------------- */
+    /*=============================*/
+    /* 각 섹션별 텍스트 중앙배치:S */
+	/*=============================*/
 	.section{
 		text-align:center;
 	}
+    /*=============================*/
+    /* 각 섹션별 텍스트 중앙배치:E */
+	/*=============================*/
 
-	/* Fixed header and footer.
-	* ---------------------------------------부트스트랩으로 내부값 변경됨 */
+	/*======================*/
+    /* 헤더영역, 푸터영역:S */
+	/*======================*/
 	#header, #footer{
 		position:fixed;
-/*		height: 50px;*/
+    /*	height: 50px;*/
 		display:block;
 		width: 100%;
-/*		background: #333;*/
+    /*	background: #333;*/
 		z-index:9;
 		text-align:center;
 		color: #f2f2f2;
-/*		padding: 50px 0 0 0;*/
+    /*	padding: 50px 0 0 0;*/
 	}
 
 	#header{
 		top:0px;
 	}
+
 	#footer{
-		bottom:0px;
+        bottom:0px;
 	}
+	/*======================*/
+    /* 헤더영역, 푸터영역:E */
+	/*======================*/
 
+	/*==============================*/
+    /* 섹션 트리거(텍스트,이미지):S */
+	/*==============================*/
+    #infoMenu {
+        bottom: 80px;
+    }
 
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu {
-		bottom: 80px;
-	}
-	#infoMenu li a {
-		color: #fff;
-		z-index: 999;
-	}
-		#section2 img{
-			left: 130%;
-			position:relative;
-      transition: all 800ms ease;
-		}
-		#section2 p{
-			opacity: 0;
-      transition: all 800ms ease;
-		}
+    #infoMenu li a {
+        color: #fff;
+        z-index: 999;
+    }
 
-        /* 움직이는 텍스트 만드는 스타일:S */
-        #section2 img{
-			left: 130%;
-			position:relative;
-      transition: all 800ms ease;
-		}
-		#section2 p{
-			opacity: 0;
-      transition: all 800ms ease;
-		}
-        #section2 h1{
-			opacity: 0;
-      transition: all 800ms ease;
-		}
-		#section3 .intro{
-			left: -130%;
-			position:relative;
-      transition: all 800ms ease;
-		}
+    #section2 img{
+        left: 130%;
+        position:relative;
+        transition: all 800ms ease;
+    }
+
+    #section2 p{
+        opacity: 0;
+        transition: all 800ms ease;
+    }
+
+    #section2 h1{
+        opacity: 0;
+        transition: all 800ms ease;
+    }
+    #section3 .intro{
+        left: -130%;
+        position:relative;
+        transition: all 800ms ease;
+    }
 
     #section3 .intro{
-      left: -130%;
-      position:relative;
-      transition: all 800ms ease;
+        left: -130%;
+        position:relative;
+        transition: all 800ms ease;
     }
-    /* 움직이는 텍스트 만드는 스타일:E */
 
     /**
     * Here we fire the animation for section 3.
     * As the fp-viewing class in the body changes on each section and slide.
     */
+
     body.fp-viewing-3rdPage #section3 .intro{
-       left: 0%;
+        left: 0%;
     }
+
+	/*==============================*/
+    /* 섹션 트리거(텍스트,이미지):E */
+	/*==============================*/
