@@ -75,6 +75,37 @@
 			opacity: 0;
       transition: all 600ms ease;
 		}
+
+        /* 움직이는 텍스트 만드는 스타일:S */
+        #section2 img{
+			left: 130%;
+			position:relative;
+      transition: all 600ms ease;
+		}
+		#section2 p{
+			opacity: 0;
+      transition: all 600ms ease;
+		}
+		#section3 .intro{
+			left: -130%;
+			position:relative;
+      transition: all 600ms ease;
+		}
+
+    #section3 .intro{
+      left: -130%;
+      position:relative;
+      transition: all 600ms ease;
+    }
+    /* 움직이는 텍스트 만드는 스타일:E */
+
+    /**
+    * Here we fire the animation for section 3.
+    * As the fp-viewing class in the body changes on each section and slide.
+    */
+    body.fp-viewing-3rdPage #section3 .intro{
+       left: 0%;
+    }
 	</style>
 
 	<!--[if IE]>
